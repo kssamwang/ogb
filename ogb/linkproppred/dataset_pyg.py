@@ -107,7 +107,7 @@ class PygLinkPropPredDataset(InMemoryDataset):
         if decide_download(url):
             path = download_url(url, self.original_root)
             extract_zip(path, self.original_root)
-            os.unlink(path)
+            # os.unlink(path)
             shutil.rmtree(self.root)
             shutil.move(osp.join(self.original_root, self.download_name), self.root)
         else:

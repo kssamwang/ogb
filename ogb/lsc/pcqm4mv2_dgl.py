@@ -49,7 +49,7 @@ class DglPCQM4Mv2Dataset(object):
         if decide_download(self.url):
             path = download_url(self.url, self.original_root)
             extract_zip(path, self.original_root)
-            os.unlink(path)
+            # os.unlink(path)
         else:
             print('Stop download.')
             exit(-1)

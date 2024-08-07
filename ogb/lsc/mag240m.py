@@ -48,7 +48,7 @@ class MAG240MDataset(object):
             if decide_download(self.url):
                 path = download_url(self.url, self.root)
                 extract_zip(path, self.root)
-                os.unlink(path)
+                # os.unlink(path)
             else:
                 print('Stop download.')
                 exit(-1)

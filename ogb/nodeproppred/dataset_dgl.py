@@ -98,7 +98,7 @@ class DglNodePropPredDataset(object):
                 if decide_download(url):
                     path = download_url(url, self.original_root)
                     extract_zip(path, self.original_root)
-                    os.unlink(path)
+                    # os.unlink(path)
                     # delete folder if there exists
                     try:
                         shutil.rmtree(self.root)
